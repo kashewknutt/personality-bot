@@ -14,9 +14,9 @@ GITHUB_API_TOKEN = os.getenv("GITHUB_API_TOKEN")
 LLM_FALLBACK_URL = "https://models.github.ai/inference/chat/completions"
 TIME_GAP_THRESHOLD_SECONDS = 40000
 MAX_LLM_CONTEXT_MESSAGES = 3  # Number of recent message
-LLM_MAX_CALLS_PER_DAY = 2     # Your daily limit for gpt-4.1-mini. Be conservative!
+LLM_MAX_CALLS_PER_DAY = 0     # Your daily limit for gpt-4.1-mini. Be conservative!
 LLM_DAILY_LIMIT_COUNTER = 0    # Will track calls made during this script execution
-MAX_TURNS_PER_EXAMPLE = 20 # Max number of turns (Human/Assistant exchanges) per training example.
+MAX_TURNS_PER_EXAMPLE = 2 # Max number of turns (Human/Assistant exchanges) per training example.
 MAX_TURN_CHARS = 10000 # Max character length
 
 # --- PATHS ---

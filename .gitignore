@@ -14,3 +14,4 @@ models/**/*.pt
 models/**/*.pth
 models/**/*.onnx
 models/**/*.ckpt
+models/**/*.zip

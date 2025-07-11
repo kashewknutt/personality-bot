@@ -22,6 +22,7 @@ SYSTEM_MESSAGES_FILTERS = [
     "You created group",
     "You were added",
     "You left",
+    "left",
     "changed the group description",
     "changed this group's icon",
     "changed the subject from",

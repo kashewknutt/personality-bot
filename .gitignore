@@ -1,1 +1,16 @@
-extracted_chats/
+# Python virtual environment
+venv/
+.venv/
+
+.env
+
+data/raw/
+data/processed/
+
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.gguf
+models/**/*.pt
+models/**/*.pth
+models/**/*.onnx
+models/**/*.ckpt

@@ -16,8 +16,8 @@ HUGGING_FACE_TOKEN = os.getenv("HUGGING_FACE_TOKEN")
 # Paths - Assuming you have the 'fine_tuned_model' directory available
 # If you downloaded 'fine_tuned_model' from Colab to your local machine:
 # Point this to its path, e.g., "D:/Downloads/fine_tuned_model"
-LORA_ADAPTERS_PATH = "/content/models/sfw/fine_tuned_model" # Path to your fine_tuned_model folder
-FINAL_MERGED_MODEL_SAVE_PATH = "/content/models/sfw/merged_model" # Where to save the merged model
+LORA_ADAPTERS_PATH = "models/sfw/fine_tuned_model" # Path to your fine_tuned_model folder
+FINAL_MERGED_MODEL_SAVE_PATH = "models/sfw/merged_model" # Where to save the merged model
 
 # Ensure the output directory exists
 os.makedirs(FINAL_MERGED_MODEL_SAVE_PATH, exist_ok=True)
@@ -46,7 +46,7 @@ model = FastLanguageModel.get_peft_model(
     use_gradient_checkpointing = "unsloth", # Or False, if not using during inference
 )
 # Load the actual adapter weights onto the model
-model.load_adapter(LORA_ADAPTERS_PATH)
+model.load_adapter(LORA_ADAPTERS_PATH, adapter_name="default")
 print("LoRA adapters loaded onto the model.")
 
 # --- MERGE AND SAVE THE MODEL ---

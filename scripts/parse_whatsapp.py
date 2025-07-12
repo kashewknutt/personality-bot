@@ -41,7 +41,14 @@ SYSTEM_MESSAGES_FILTERS = [
     "changed their phone number to a new number.",
     "updated their status to",
     "started a call.",
-    "This message was deleted."
+    "This message was deleted.",
+    "deleted this message",
+    "group icon",
+    "group description",
+    "group name",
+    "changed the group icon.",
+    "changed the group description.",
+    "changed the group name.",
 ]
 
 POTENTIAL_UNNECESSARY_MESSAGES = [
@@ -50,6 +57,10 @@ POTENTIAL_UNNECESSARY_MESSAGES = [
     "www",
     "https://",
     "@",
+    ".com",
+    ".org",
+    ".net",
+    "vercel.app"
 ]
 
 def parse_chat_line(line):
